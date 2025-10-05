@@ -1,0 +1,22 @@
+
+[package]
+name = "asp-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+asp-types = { version = "0.1.0", path = "asp-types" }
+crossbeam-channel = "0.5.15"
+log = "0.4.28"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+
+[dev-dependencies]
+env_logger = "0.11.8"
+eyre = "0.6.12"
+
+[workspace]
+members = [
+    ".",
+    "asp-types"
+]
